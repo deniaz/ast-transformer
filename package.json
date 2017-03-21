@@ -1,0 +1,35 @@
+{
+  "name": "yeoman-ast-transformer",
+  "version": "1.0.0-alpha",
+  "main": "index.js",
+  "author": "Robert Vogt <robert@cheekyowl.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-jest": "^19.0.0",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-preset-latest": "^6.24.0",
+    "eslint": "^3.18.0",
+    "eslint-config-airbnb-base": "^11.1.1",
+    "eslint-plugin-import": "^2.2.0",
+    "flow-bin": "^0.42.0",
+    "flow-typed": "^2.0.0",
+    "jest": "^19.0.2"
+  },
+  "scripts": {
+    "test": "jest",
+    "watch": "babel --watch=./lib --out-dir=./build"
+  },
+  "dependencies": {
+    "babel-generator": "^6.24.0",
+    "babel-traverse": "^6.23.1",
+    "babel-types": "^6.23.0",
+    "babylon": "^6.16.1"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "transform": {
+      "^.+\\.(js)$": "<rootDir>/node_modules/babel-jest"
+    }
+  }
+}
